@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Web Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo" />
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a class="activeLink" href="#about">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="content">
+      <div class="text">
+        <h1>
+          I'm <strong style="color: #3abff9">Jawad</strong> <br />Frontend Web
+          Developer
+        </h1>
+        <p>
+          I build high-performing & modern applications with React.js by
+          consuming backend APIs
+        </p>
+        <button>Contact Me</button>
+      </div>
+      <div class="image">
+        <img src="img/person.png" alt="person Image" />
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about-content">
+        <h2>Who Am I?</h2>
+        <img class="jawadImg" src="img/jawad3.jpg" alt="Jawad" />
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit at
+          officiis dolorem nobis sit fugiat eius. Cumque quo laboriosam minus
+          porro? Nam dolore eum quo saepe ratione optio ab atque?
+        </p>
+
+        <h3>Skills && Technologies</h3>
+        <div class="skills">
+          <div><img src="img/icons/typescript.png" alt="" />Typescript</div>
+          <div><img src="img/icons/Nextjs.png" />NextJS</div>
+          <div><img src="img/icons/tailwindcss.png" />Tailwind</div>
+          <div><img src="img/icons/github.png" />Github</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="media">
+      <h2>Media</h2>
+      <img src="myimage.jpg" alt="My Image" />
+      <video width="320" height="240" controls>
+        <source src="myvideo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <audio controls>
+        <source src="mysong.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" /><br /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" /><br /><br />
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea><br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-container">
+        <img src="img/jawad1.jpg" alt="Image 1" />
+        <img src="img/jawad2.jpg" alt="Image 2" />
+        <img src="img/jawad3.jpg" alt="Image 3" />
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy;My Web Page 2023</p>
+    </footer>
+  </body>
+</html>
