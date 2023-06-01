@@ -16,3 +16,29 @@ function toggleDarkMode() {
     darkMode.classList.add("fa-moon-o");
   }
 }
+
+// responsive menu code
+const menuToggle = document.querySelector(".menu-toggle");
+const navList = document.querySelector("nav ul");
+
+menuToggle.addEventListener("click", function () {
+  navList.classList.remove("hide");
+  navList.classList.toggle("show");
+  // access ul and li and event handlers
+  const ulElement = document.getElementById("myUl");
+  const liElements = ulElement.querySelectorAll("li");
+
+  // loop through each li element
+  liElements.forEach(function (li) {
+    li.addEventListener("click", function () {
+      navList.classList.remove("show");
+      navList.classList.toggle("hide");
+    });
+  });
+});
+
+window.onresize = function (event) {
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    navList.classList.remove("hide");
+  }
+};

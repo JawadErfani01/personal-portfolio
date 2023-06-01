@@ -13,24 +13,29 @@
       <div class="logo">
         <img src="img/logo.png" alt="Logo" />
       </div>
+      <div class="header-RItem">
+        <button
+          class="toggleDarkMode-btn"
+          onclick="toggleDarkMode()"
+          id="toggle-mode"
+        >
+          <i id="toggle-icon" class="fa fa-moon-o f-x"></i>
+        </button>
 
-      <nav>
-        <ul>
-          <li>
-            <button
-              class="toggleDarkMode-btn"
-              onclick="toggleDarkMode()"
-              id="toggle-mode"
-            >
-              <i id="toggle-icon" class="fa fa-moon-o f-x"></i>
-            </button>
-          </li>
-          <li><a href="#content">Home</a></li>
-          <li><a class="activeLink" href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-        </ul>
-      </nav>
+        <nav>
+          <ul id="myUl">
+            <li><a href="#content">Home</a></li>
+            <li><a class="activeLink" href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
     </header>
 
     <section id="content" class="content">

@@ -18,7 +18,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 90px;
+  padding: 16px 40px 16px 90px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
   position: sticky;
   top: 0;
@@ -32,15 +32,13 @@ header {
   height: 50px;
 }
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+header .header-RItem {
   display: flex;
-  justify-content: center;
   align-items: center;
+  margin-right: 10px;
 }
-nav .toggleDarkMode-btn {
+
+.toggleDarkMode-btn {
   border-radius: 50%;
   margin: 0 10px;
   background: #000;
@@ -53,24 +51,29 @@ nav .toggleDarkMode-btn {
   cursor: pointer;
 }
 
-.dark-mode nav .toggleDarkMode-btn {
+.dark-mode .toggleDarkMode-btn {
   color: black;
   background: white;
 }
 
-nav li {
-  margin-right: 20px;
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
-nav li:last-child {
-  margin-right: -30px !important;
-}
+
+/* nav li:last-child {
+  margin-right: -30px;
+} */
 
 nav a {
   text-decoration: none;
   font-weight: bold;
   color: white;
-  padding: 10px 20px;
-  border-radius: 99px;
+  padding: 8px 18px;
+  margin: 10px;
+  border-radius: 24px;
   border: 2px solid rgb(58, 191, 249);
   color: rgb(58, 191, 249);
   transition: all 0.4s linear;
@@ -85,6 +88,35 @@ nav a:hover {
   color: white;
 }
 
+#toggle-icon {
+  font-size: 24px;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: 4px auto;
+  border-radius: 2px;
+  background-color: #333;
+}
+.dark-mode .bar {
+  background-color: #cfcece;
+}
+
+.show {
+  display: flex;
+  opacity: 1;
+}
+.hide {
+  display: none;
+}
+
 /* header content style */
 
 .content {
@@ -92,7 +124,7 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .text {
@@ -207,7 +239,7 @@ nav a:hover {
   align-items: start;
 }
 
-.contact-detail {
+#contact .contact-detail {
   width: 35%;
 }
 #contact form {
@@ -266,7 +298,7 @@ nav a:hover {
   padding: 18px 36px;
   border-radius: 5px;
   box-shadow: 4px 2px 18px rgb(138, 138, 138);
-
+  width: 50%;
   cursor: pointer;
   transition: all 0.3s linear;
   margin: 20px 0px;
@@ -356,4 +388,133 @@ footer {
   background-color: rgb(0, 0, 0);
   box-shadow: 2px 4px 18px rgba(233, 233, 233, 0.5);
   text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  /* responsive Navbar */
+  header {
+    padding: 14px 20px;
+  }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  nav {
+    width: 100%;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transition: 0.3s linear;
+    background-color: #ffffff;
+    padding: 1rem;
+    box-shadow: 0 6px 6px -2px rgb(139, 136, 136);
+  }
+  .dark-mode nav ul {
+    background-color: #000000;
+    box-shadow: 0 6px 6px -2px rgb(139, 136, 136);
+  }
+
+  nav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    width: 100%;
+  }
+  nav li a {
+    width: 70%;
+    border-radius: 7px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /*  sections style  */
+  section {
+    padding-top: 70px;
+    padding: 10px;
+  }
+
+  /* header content style */
+
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text {
+    padding: 10px 20px;
+  }
+  .header-content-btn {
+    width: 100%;
+    padding: 12px 56px;
+  }
+  .image img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  /* about section */
+
+  .about-content p {
+    width: 100%;
+  }
+
+  .skills {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .skills div {
+    margin: 12px;
+    padding: 12px 20px;
+  }
+  .skills img {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* contact sections */
+
+  #contact {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 95%;
+  }
+
+  #contact .contact-detail {
+    width: 100%;
+  }
+  .contact-detail-btn {
+    padding: 16px;
+    font-size: 16px;
+
+    width: 50%;
+
+    margin: 10px 0px 30px 0px;
+  }
+  #contact form {
+    width: 80%;
+    margin-top: 10px;
+  }
+  form input[type="submit"] {
+    background-color: rgb(17, 17, 17);
+    color: #fff;
+    padding: 12px 30px;
+    width: 50%;
+  }
 }
