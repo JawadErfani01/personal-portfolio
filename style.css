@@ -1,12 +1,17 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+html {
   scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 section {
-  margin-top: 20px;
+  padding-top: 70px;
   padding: 50px;
 }
 header {
@@ -32,6 +37,25 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .toggleDarkMode-btn {
+  border-radius: 50%;
+  margin: 0 10px;
+  background: #000;
+  border: none;
+  box-shadow: 2px 7px 12px rgba(117, 109, 109, 0.5);
+  color: white;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.dark-mode nav .toggleDarkMode-btn {
+  color: black;
+  background: white;
 }
 
 nav li {
@@ -99,7 +123,7 @@ nav a:hover {
   max-height: 100%;
 }
 
-button {
+.header-content-btn {
   background-color: rgb(58, 191, 249);
   color: #fff;
   font-style: italic;
@@ -113,7 +137,7 @@ button {
   margin: 20px 0px;
 }
 
-button:hover {
+.header-content-btn:hover {
   background-color: rgb(44, 176, 212);
   box-shadow: 4px 2px 18px rgba(14, 140, 179, 0.8);
   transform: scale(0.98);
@@ -168,54 +192,168 @@ button:hover {
 .skills img {
   width: 80px;
   height: 80px;
-
+  background: white;
+  border-radius: 50%;
   display: block;
+
   margin: 10px 0px;
 }
 
 /* contact style */
-form label {
-  display: inline-block;
-  width: 100px;
-  margin-bottom: 10px;
+
+#contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
 }
 
+.contact-detail {
+  width: 35%;
+}
+#contact form {
+  width: 45%;
+  margin-top: 10px;
+}
+.contact-detail h2 {
+  margin-bottom: 18px;
+  font-size: 36px;
+  margin-top: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact-detail span {
+  display: block;
+  margin: 6px 0px;
+}
+.contact-detail .email,
+.phone {
+  font-size: 18px;
+  margin: 12px 0px;
+}
+.contact-detail .email i,
+.phone i {
+  margin-right: 12px;
+  font-size: 22px;
+}
+
+.contact-detail .contact-media {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;
+}
+.contact-media a {
+  color: black;
+  transition: all 0.3 linear;
+}
+.dark-mode .contact-media a i {
+  color: black;
+  background: white;
+  border-radius: 50%;
+  transition: all 0.3 linear;
+}
+.contact-media a:hover {
+  color: rgb(26, 13, 13);
+  transform: scale(0.98);
+}
+.contact-detail-btn {
+  background-color: rgb(17, 17, 17);
+  color: #fff;
+  font-style: italic;
+  border: none;
+  font-size: 18px;
+  padding: 18px 36px;
+  border-radius: 5px;
+  box-shadow: 4px 2px 18px rgb(138, 138, 138);
+
+  cursor: pointer;
+  transition: all 0.3s linear;
+  margin: 20px 0px;
+}
+.contact-detail-btn:hover {
+  background-color: rgb(35, 38, 39);
+  box-shadow: 4px 2px 18px rgb(151, 152, 153);
+  transform: scale(0.98);
+}
 form input[type="text"],
 form input[type="email"],
 form textarea {
-  padding: 10px;
+  padding: 12px;
   border-radius: 5px;
   border: none;
-  margin-bottom: 20px;
-  width: 100%;
+  margin-bottom: 8px;
+  width: 90%;
+  font-size: 14px;
+  background: black;
+  color: white;
 }
 
 form input[type="submit"] {
-  background-color: #333;
+  background-color: rgb(17, 17, 17);
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 30px;
   border-radius: 5px;
   border: none;
+  box-shadow: 4px 2px 18px rgb(151, 152, 153);
   cursor: pointer;
+  transition: all 0.2s linear;
 }
 
 form input[type="submit"]:hover {
-  background-color: #666;
+  background-color: rgb(15, 15, 15);
+  transform: scale(0.98);
 }
 
+/* gallery style */
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 36px;
+  width: 100%;
+}
 .gallery-container img {
-  display: block;
-  float: left;
-  margin-right: 20px;
+  width: 40vh;
+  height: 50vh;
+  border-radius: 24px;
   margin-bottom: 20px;
-  max-width: 30%;
-  height: auto;
+  box-shadow: 2px 7px 12px rgba(31, 28, 28, 0.5);
+  transition: all 0.2s linear;
+}
+.gallery-container img:hover {
+  transform: scale(1.07);
 }
 
+/* footer style */
 footer {
   clear: both;
   padding: 20px;
-  background-color: #333;
+  background-color: white;
+  box-shadow: 2px 4px 18px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* styles for your dark mode stylesheet */
+.dark-mode {
+  background-color: #000000;
   color: #fff;
+}
+
+.dark-mode form input[type="text"],
+.dark-mode form input[type="email"],
+.dark-mode textarea {
+  background: rgb(77, 75, 75);
+  color: white;
+  outline: none;
+}
+.dark-mode header {
+  background-color: rgb(0, 0, 0);
+  box-shadow: 4px 2px 18px rgb(138, 138, 138);
+}
+.dark-mode footer {
+  background-color: rgb(0, 0, 0);
+  box-shadow: 2px 4px 18px rgba(233, 233, 233, 0.5);
   text-align: center;
 }
