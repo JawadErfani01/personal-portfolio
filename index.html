@@ -5,10 +5,7 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
   <body>
@@ -19,15 +16,24 @@
 
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
+          <li>
+            <button
+              class="toggleDarkMode-btn"
+              onclick="toggleDarkMode()"
+              id="toggle-mode"
+            >
+              <i id="toggle-icon" class="fa fa-moon-o f-x"></i>
+            </button>
+          </li>
+          <li><a href="#content">Home</a></li>
           <li><a class="activeLink" href="#about">About</a></li>
-          <li><a href="#">Services</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#gallery">Gallery</a></li>
         </ul>
       </nav>
     </header>
 
-    <section class="content">
+    <section id="content" class="content">
       <div class="text">
         <h1>
           I'm <strong style="color: #3abff9">Jawad</strong> <br />Frontend Web
@@ -37,7 +43,10 @@
           I build high-performing & modern applications with React.js by
           consuming backend APIs
         </p>
-        <button>Contact Me</button>
+
+        <a href="#contact">
+          <button class="header-content-btn">Contact Me</button></a
+        >
       </div>
       <div class="image">
         <img src="img/person.png" alt="person Image" />
@@ -63,29 +72,72 @@
         </div>
       </div>
     </section>
-
-    <section id="media">
-      <h2>Media</h2>
-      <img src="myimage.jpg" alt="My Image" />
-      <video width="320" height="240" controls>
-        <source src="myvideo.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <audio controls>
-        <source src="mysong.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </section>
+    <div style="margin-bottom: 50px" id="contact"></div>
 
     <section id="contact">
-      <h2>Contact</h2>
+      <div class="contact-detail">
+        <h2>Contact Me</h2>
+
+        <span class="email"
+          ><i class="fa fa-envelope"></i>jawad.erfani147@gmail.com</span
+        >
+
+        <span class="phone"><i class="fa fa-whatsapp"></i>0786741729</span>
+        <div class="contact-media">
+          <a href="https://github.com/JawadErfani01">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+          <a href="https://www.linkedin.com/in/jawad-erfani-610197195/">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+          <a href="https://twitter.com/JawadErfani01">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+          <a href="https://web.telegram.org/k/">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-telegram fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </div>
+        <a href="/img/Jawad Erfani.pdf" download="Jawad Erfani">
+          <button class="contact-detail-btn">Download CV</button>
+        </a>
+      </div>
       <form action="#" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" /><br /><br />
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" /><br /><br />
-        <label for="message">Message:</label>
-        <textarea id="message" name="message"></textarea><br /><br />
+        <input
+          type="text"
+          placeholder="Your Name"
+          id="name"
+          required
+          name="name"
+        /><br /><br />
+
+        <input
+          type="email"
+          id="email"
+          required
+          placeholder="Your Email"
+          name="email"
+        /><br /><br />
+
+        <textarea
+          id="message"
+          placeholder="Your Message"
+          rows="5"
+          name="message"
+          spellcheck="true"
+        ></textarea
+        ><br /><br />
         <input type="submit" value="Submit" />
       </form>
     </section>
@@ -102,5 +154,6 @@
     <footer>
       <p>&copy;My Web Page 2023</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
