@@ -1,5 +1,6 @@
-// dark mode scripts
 const darkMode = document.getElementById("toggle-icon");
+const dateElement = document.getElementById("date");
+const timeElement = document.getElementById("time");
 
 function toggleDarkMode() {
   var element = document.body;
@@ -42,3 +43,28 @@ window.onresize = function (event) {
     navList.classList.remove("hide");
   }
 };
+
+setInterval(() => {
+  const date = new Date();
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  const formattedDate = date.toLocaleDateString("en-US", options);
+  dateElement.innerHTML = formattedDate;
+
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+  const amOrPm = hours >= 12 ? "PM" : "AM";
+  const twelveHourFormat = hours > 12 ? hours - 12 : hours;
+  const timeString = `${twelveHourFormat}:${minutes
+    .toString()
+    .padStart(2, "0")}:${seconds} ${amOrPm}`;
+  timeElement.innerHTML = timeString;
+}, 1000);
+
+const now = new Date();
+console.log(now.toLocaleString());

@@ -24,7 +24,7 @@ header {
   top: 0;
   z-index: 99;
   background: white;
-  opacity: 0.95;
+  opacity: 0.98;
 }
 
 .logo img {
@@ -34,13 +34,15 @@ header {
 
 header .header-RItem {
   display: flex;
+  justify-content: center;
   align-items: center;
+
   margin-right: 10px;
 }
 
 .toggleDarkMode-btn {
   border-radius: 50%;
-  margin: 0 10px;
+  margin: 0 20px;
   background: #000;
   border: none;
   box-shadow: 2px 7px 12px rgba(117, 109, 109, 0.5);
@@ -62,10 +64,6 @@ nav ul {
   padding: 0;
   display: flex;
 }
-
-/* nav li:last-child {
-  margin-right: -30px;
-} */
 
 nav a {
   text-decoration: none;
@@ -119,6 +117,28 @@ nav a:hover {
 
 /* header content style */
 
+#dateTime {
+  position: absolute;
+  right: 0px;
+  /* width: 10%; */
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  margin: 10px;
+  padding: 10px;
+
+  border-radius: 7px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.7);
+}
+#date {
+  font-size: 12px;
+  margin: 0px;
+}
+#time {
+  font-size: 16px;
+  margin: 6px 0px 0 0;
+  font-weight: bold;
+}
 .content {
   display: flex;
   align-items: center;
@@ -163,15 +183,15 @@ nav a:hover {
   font-size: 18px;
   padding: 22px 56px;
   border-radius: 99px;
-  box-shadow: 1px 2px 22px rgba(14, 140, 179, 0.8);
+  box-shadow: 1px 4px 8px rgba(72, 77, 78, 0.8);
   cursor: pointer;
   transition: all 0.3s linear;
   margin: 20px 0px;
 }
 
 .header-content-btn:hover {
-  background-color: rgb(44, 176, 212);
-  box-shadow: 4px 2px 18px rgba(14, 140, 179, 0.8);
+  background-color: rgb(60, 199, 240);
+  box-shadow: 1px 4px 10px rgba(14, 16, 17, 0.8);
   transform: scale(0.98);
 }
 
@@ -389,8 +409,28 @@ footer {
   box-shadow: 2px 4px 18px rgba(233, 233, 233, 0.5);
   text-align: center;
 }
-
+.dark-mode #dateTime {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  box-shadow: 1px 2px 6px rgba(255, 255, 255, 0.7);
+}
 /* Responsive styles */
+
+@media (max-width: 620px) {
+  #dateTime {
+    display: flex;
+    justify-content: center;
+    /* position: static; */
+    align-items: center;
+    margin: auto;
+    gap: 10px;
+  }
+  #time {
+    margin: 0;
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 768px) {
   /* responsive Navbar */
   header {
@@ -398,8 +438,8 @@ footer {
   }
 
   .logo img {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
   }
 
   nav {
@@ -433,6 +473,11 @@ footer {
   nav li a {
     width: 70%;
     border-radius: 7px;
+  }
+  .toggleDarkMode-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
   }
 
   .menu-toggle {
@@ -498,6 +543,9 @@ footer {
 
   #contact .contact-detail {
     width: 100%;
+  }
+  .contact-detail .contact-media {
+    justify-content: center;
   }
   .contact-detail-btn {
     padding: 16px;
