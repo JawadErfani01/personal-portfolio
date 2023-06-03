@@ -10,15 +10,22 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  padding: 10px 100px;
+}
+
 section {
   padding-top: 70px;
-  padding: 50px;
 }
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 40px 16px 90px;
+  padding: 10px 40px 10px 90px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
   position: sticky;
   top: 0;
@@ -27,9 +34,16 @@ header {
   opacity: 0.98;
 }
 
-.logo img {
-  width: 50px;
-  height: 50px;
+.logo h2 {
+  margin: 8px;
+  font-size: 32px;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  transform: skewX(-20deg);
+}
+.logo span {
+  color: rgb(58, 191, 249);
+  font-size: 36px;
 }
 
 header .header-RItem {
@@ -51,11 +65,6 @@ header .header-RItem {
   height: 40px;
   font-size: 22px;
   cursor: pointer;
-}
-
-.dark-mode .toggleDarkMode-btn {
-  color: black;
-  background: white;
 }
 
 nav ul {
@@ -103,9 +112,6 @@ nav a:hover {
   border-radius: 2px;
   background-color: #333;
 }
-.dark-mode .bar {
-  background-color: #cfcece;
-}
 
 .show {
   display: flex;
@@ -120,13 +126,11 @@ nav a:hover {
 #dateTime {
   position: absolute;
   right: 0px;
-  /* width: 10%; */
   text-align: center;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
-  margin: 10px;
+  margin: 15px;
   padding: 10px;
-
   border-radius: 7px;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.7);
 }
@@ -139,26 +143,24 @@ nav a:hover {
   margin: 6px 0px 0 0;
   font-weight: bold;
 }
-.content {
+.home {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
-  /* flex-wrap: wrap; */
 }
 
-.text {
-  flex-basis: 47%;
-  padding: 10px 40px;
+.home-text {
+  flex-basis: 55%;
 }
 
-.text h1 {
+.home-text h1 {
   font-size: 46px;
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 16px;
   text-shadow: 0px 2px 4px rgba(8, 161, 172, 0.4);
 }
-.text p {
+.home-text p {
   margin-top: 0px;
   font-family: "Times New Roman", Times, serif;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
@@ -166,16 +168,20 @@ nav a:hover {
   font-size: 24px;
 }
 
-.image {
+.home-image {
   flex-basis: 45%;
 }
 
-.image img {
-  max-width: 100%;
-  max-height: 100%;
+.home-image img {
+  max-width: 75%;
+  max-height: 75%;
+  margin: 30px;
+  border-radius: 10%;
+  transform: skewX(10deg);
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.8);
 }
 
-.header-content-btn {
+.home-btn {
   background-color: rgb(58, 191, 249);
   color: #fff;
   font-style: italic;
@@ -189,7 +195,7 @@ nav a:hover {
   margin: 20px 0px;
 }
 
-.header-content-btn:hover {
+.home-btn:hover {
   background-color: rgb(60, 199, 240);
   box-shadow: 1px 4px 10px rgba(14, 16, 17, 0.8);
   transform: scale(0.98);
@@ -197,32 +203,33 @@ nav a:hover {
 
 /* about section style */
 
-.about-content {
+.about {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.about-content h2 {
-  font-size: 46px;
-  color: rgb(58, 191, 249);
-  margin-bottom: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: italic;
+.about h2 {
+  margin-bottom: 18px;
+  font-size: 36px;
+  margin-top: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
 }
-.about-content .jawadImg {
+.about img {
   width: 200px;
   height: 200px;
-
-  border-radius: 99px;
-  border: 4px solid rgb(58, 191, 249);
+  border-radius: 50%;
 }
 
-.about-content p {
+.about p {
   text-align: center;
   font-size: 18px;
-  width: 70%;
-  font-family: Arial, Helvetica, sans-serif;
+  width: 90%;
+  margin: 30px;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .skills {
@@ -247,23 +254,21 @@ nav a:hover {
   background: white;
   border-radius: 50%;
   display: block;
-
   margin: 10px 0px;
 }
 
 /* contact style */
-
 #contact {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: start;
 }
 
 #contact .contact-detail {
-  width: 35%;
+  width: 45%;
 }
 #contact form {
-  width: 45%;
+  width: 50%;
   margin-top: 10px;
 }
 .contact-detail h2 {
@@ -299,12 +304,7 @@ nav a:hover {
   color: black;
   transition: all 0.3 linear;
 }
-.dark-mode .contact-media a i {
-  color: black;
-  background: white;
-  border-radius: 50%;
-  transition: all 0.3 linear;
-}
+
 .contact-media a:hover {
   color: rgb(26, 13, 13);
   transform: scale(0.98);
@@ -358,7 +358,13 @@ form input[type="submit"]:hover {
 }
 
 /* gallery style */
-
+#gallery h2 {
+  margin-bottom: 18px;
+  font-size: 36px;
+  /* margin: 20px 40px; */
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+}
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
@@ -387,12 +393,32 @@ footer {
   text-align: center;
 }
 
-/* styles for your dark mode stylesheet */
+/* styles for dark mode  */
+
 .dark-mode {
   background-color: #000000;
-  color: #fff;
+  color: #ececec;
 }
 
+.dark-mode header {
+  background-color: rgb(0, 0, 0);
+  box-shadow: 4px 2px 18px rgb(138, 138, 138);
+}
+
+.dark-mode .toggleDarkMode-btn {
+  color: black;
+  background: white;
+}
+.dark-mode .bar {
+  background-color: #cfcece;
+}
+
+.dark-mode .contact-media a i {
+  color: black;
+  background: white;
+  border-radius: 50%;
+  transition: all 0.3 linear;
+}
 .dark-mode form input[type="text"],
 .dark-mode form input[type="email"],
 .dark-mode textarea {
@@ -400,10 +426,7 @@ footer {
   color: white;
   outline: none;
 }
-.dark-mode header {
-  background-color: rgb(0, 0, 0);
-  box-shadow: 4px 2px 18px rgb(138, 138, 138);
-}
+
 .dark-mode footer {
   background-color: rgb(0, 0, 0);
   box-shadow: 2px 4px 18px rgba(233, 233, 233, 0.5);
@@ -414,22 +437,8 @@ footer {
   color: rgb(255, 255, 255);
   box-shadow: 1px 2px 6px rgba(255, 255, 255, 0.7);
 }
-/* Responsive styles */
 
-@media (max-width: 620px) {
-  #dateTime {
-    display: flex;
-    justify-content: center;
-    /* position: static; */
-    align-items: center;
-    margin: auto;
-    gap: 10px;
-  }
-  #time {
-    margin: 0;
-    font-size: 14px;
-  }
-}
+/* Responsive styles */
 
 @media (max-width: 768px) {
   /* responsive Navbar */
@@ -437,9 +446,11 @@ footer {
     padding: 14px 20px;
   }
 
-  .logo img {
-    width: 35px;
-    height: 35px;
+  .logo span {
+    font-size: 30px;
+  }
+  .logo h2 {
+    font-size: 24px;
   }
 
   nav {
@@ -486,49 +497,55 @@ footer {
 
   /*  sections style  */
   section {
-    padding-top: 70px;
-    padding: 10px;
+    padding-top: 50px;
+  }
+  .container {
+    padding: 10px 30px;
   }
 
-  /* header content style */
+  /* home style */
 
-  .content {
+  .home {
     flex-direction: column;
     text-align: center;
+    padding-top: 15px;
   }
 
-  .text {
-    padding: 10px 20px;
-  }
-  .header-content-btn {
-    width: 100%;
+  .home-btn {
+    width: 90%;
     padding: 12px 56px;
   }
-  .image img {
+  .home-image img {
     max-width: 80%;
     max-height: 80%;
   }
 
   /* about section */
 
-  .about-content p {
-    width: 100%;
+  .about p {
+    width: 98%;
+    text-align: center;
   }
-
+  .about img {
+    width: 150px;
+    height: 150px;
+  }
   .skills {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: 6px;
   }
   .skills div {
     margin: 12px;
     padding: 12px 20px;
+    font-size: 12px;
   }
   .skills img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
 
   /* contact sections */
@@ -550,9 +567,7 @@ footer {
   .contact-detail-btn {
     padding: 16px;
     font-size: 16px;
-
     width: 50%;
-
     margin: 10px 0px 30px 0px;
   }
   #contact form {
@@ -564,5 +579,19 @@ footer {
     color: #fff;
     padding: 12px 30px;
     width: 50%;
+  }
+}
+
+@media (max-width: 620px) {
+  #dateTime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 10px;
+  }
+  #time {
+    margin: 0;
+    font-size: 14px;
   }
 }

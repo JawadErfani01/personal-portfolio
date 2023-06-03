@@ -1,7 +1,35 @@
+// select elements
 const darkMode = document.getElementById("toggle-icon");
 const dateElement = document.getElementById("date");
 const timeElement = document.getElementById("time");
 
+// responsive menu code
+const menuToggle = document.querySelector(".menu-toggle");
+const navList = document.querySelector("nav ul");
+menuToggle.addEventListener("click", function () {
+  navList.classList.remove("hide");
+  navList.classList.toggle("show");
+
+  const ulElement = document.getElementById("myUl");
+  const liElements = ulElement.querySelectorAll("li");
+
+  // loop through each li element
+  liElements.forEach(function (li) {
+    li.addEventListener("click", function () {
+      navList.classList.remove("show");
+      navList.classList.toggle("hide");
+    });
+  });
+});
+
+// code  to remove hide class from the nav
+window.onresize = function (event) {
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    navList.classList.remove("hide");
+  }
+};
+
+// dark mode and light mode
 function toggleDarkMode() {
   var element = document.body;
   const dark = element.classList.toggle("dark-mode");
@@ -18,32 +46,7 @@ function toggleDarkMode() {
   }
 }
 
-// responsive menu code
-const menuToggle = document.querySelector(".menu-toggle");
-const navList = document.querySelector("nav ul");
-
-menuToggle.addEventListener("click", function () {
-  navList.classList.remove("hide");
-  navList.classList.toggle("show");
-  // access ul and li and event handlers
-  const ulElement = document.getElementById("myUl");
-  const liElements = ulElement.querySelectorAll("li");
-
-  // loop through each li element
-  liElements.forEach(function (li) {
-    li.addEventListener("click", function () {
-      navList.classList.remove("show");
-      navList.classList.toggle("hide");
-    });
-  });
-});
-
-window.onresize = function (event) {
-  if (window.matchMedia("(min-width: 768px)").matches) {
-    navList.classList.remove("hide");
-  }
-};
-
+// Implemented automatic time and date to display
 setInterval(() => {
   const date = new Date();
   const options = {
@@ -66,5 +69,5 @@ setInterval(() => {
   timeElement.innerHTML = timeString;
 }, 1000);
 
-const now = new Date();
-console.log(now.toLocaleString());
+// const now = new Date();
+// console.log(now.toLocaleString("en-US")); => //output   6/3/2023, 7:09:19 PM
