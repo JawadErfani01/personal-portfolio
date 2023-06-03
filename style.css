@@ -58,6 +58,7 @@ header .header-RItem {
   border-radius: 50%;
   margin: 0 20px;
   background: #000;
+  outline: none;
   border: none;
   box-shadow: 2px 7px 12px rgba(117, 109, 109, 0.5);
   color: white;
@@ -215,6 +216,7 @@ nav a:hover {
   margin-top: 0;
   font-family: Georgia, "Times New Roman", Times, serif;
   text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
 }
 .about img {
   width: 200px;
@@ -277,6 +279,7 @@ nav a:hover {
   margin-top: 0;
   font-family: Georgia, "Times New Roman", Times, serif;
   text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
 }
 
 .contact-detail span {
@@ -361,9 +364,9 @@ form input[type="submit"]:hover {
 #gallery h2 {
   margin-bottom: 18px;
   font-size: 36px;
-  /* margin: 20px 40px; */
   font-family: Georgia, "Times New Roman", Times, serif;
   text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
 }
 .gallery-container {
   display: flex;
@@ -387,7 +390,8 @@ form input[type="submit"]:hover {
 /* footer style */
 footer {
   clear: both;
-  padding: 20px;
+
+  padding: 8px;
   background-color: white;
   box-shadow: 2px 4px 18px rgba(0, 0, 0, 0.5);
   text-align: center;
