@@ -247,6 +247,7 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
 }
 
 .about h2 {
@@ -264,8 +265,9 @@ nav a:hover {
 }
 
 .about p {
-  text-align: center;
-  font-size: 18px;
+  line-height: 1.5;
+  text-align: justify;
+  text-justify: inter-word;
   width: 90%;
   margin: 30px;
   animation: slideInFromRight 1s ease-out;
