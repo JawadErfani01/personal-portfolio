@@ -1,3 +1,7 @@
+/* lato font added to page */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;1,300&display=swap");
+
+/* general style */
 html {
   scroll-behavior: smooth;
 }
@@ -7,13 +11,12 @@ body {
   padding: 0;
   background-color: rgb(255, 255, 255);
   color: black;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   padding: 10px 100px;
 }
@@ -21,6 +24,30 @@ body {
 section {
   padding-top: 70px;
 }
+
+.section-break {
+  width: 64px;
+  height: 10px;
+
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(1, 187, 239, 1) 0%,
+      rgba(2, 177, 232, 1) 0%,
+      rgba(9, 9, 121, 1) 0%,
+      rgba(0, 201, 248, 1) 0%,
+      rgba(0, 197, 245, 1) 0%,
+      rgba(4, 133, 203, 1) 0%,
+      rgba(3, 139, 207, 1) 1%,
+      rgba(0, 212, 255, 1) 44%,
+      rgba(3, 142, 209, 1) 100%);
+  margin: 40px 10px;
+  transform: skew(40deg, 2deg);
+  animation: slideInFromLeft 1s linear;
+
+}
+
+/* header style */
 header {
   display: flex;
   justify-content: space-between;
@@ -38,9 +65,10 @@ header {
   margin: 8px;
   font-size: 32px;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
-  font-weight: bold;
+
   transform: skewX(-20deg);
 }
+
 .logo span {
   color: rgb(58, 191, 249);
   font-size: 36px;
@@ -77,7 +105,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  font-weight: bold;
+
   color: white;
   padding: 8px 18px;
   margin: 10px;
@@ -86,6 +114,7 @@ nav a {
   color: rgb(58, 191, 249);
   transition: all 0.4s linear;
 }
+
 nav a:hover {
   background-color: rgb(58, 191, 249);
   color: white;
@@ -118,11 +147,12 @@ nav a:hover {
   display: flex;
   opacity: 1;
 }
+
 .hide {
   display: none;
 }
 
-/* header content style */
+/*Home style */
 
 #dateTime {
   position: absolute;
@@ -134,16 +164,21 @@ nav a:hover {
   padding: 10px;
   border-radius: 7px;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.7);
+  animation: slideInFromTop 1s ease-in-out;
+
 }
+
 #date {
   font-size: 12px;
   margin: 0px;
 }
+
 #time {
   font-size: 16px;
-  margin: 6px 0px 0 0;
   font-weight: bold;
+  margin: 6px 0px 0 0;
 }
+
 .home {
   display: flex;
   align-items: center;
@@ -153,17 +188,18 @@ nav a:hover {
 
 .home-text {
   flex-basis: 55%;
+  animation: slideInFromLeft 1s ease-in-out;
 }
 
 .home-text h1 {
   font-size: 46px;
-  font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 16px;
   text-shadow: 0px 2px 4px rgba(8, 161, 172, 0.4);
 }
+
 .home-text p {
   margin-top: 0px;
-  font-family: "Times New Roman", Times, serif;
+
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 
   font-size: 24px;
@@ -171,6 +207,8 @@ nav a:hover {
 
 .home-image {
   flex-basis: 45%;
+  animation: slideInFromRight 1s ease-in-out;
+
 }
 
 .home-image img {
@@ -210,18 +248,19 @@ nav a:hover {
   align-items: center;
   flex-direction: column;
 }
+
 .about h2 {
   margin-bottom: 18px;
   font-size: 36px;
   margin-top: 0;
-  font-family: Georgia, "Times New Roman", Times, serif;
   text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
-  font-weight: bold;
 }
+
 .about img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  animation: slideInFromBottom 1s ease-out;
 }
 
 .about p {
@@ -229,9 +268,7 @@ nav a:hover {
   font-size: 18px;
   width: 90%;
   margin: 30px;
-
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  animation: slideInFromRight 1s ease-out;
 }
 
 .skills {
@@ -250,6 +287,7 @@ nav a:hover {
   border-radius: 24px;
   height: auto;
 }
+
 .skills img {
   width: 80px;
   height: 80px;
@@ -259,38 +297,45 @@ nav a:hover {
   margin: 10px 0px;
 }
 
-/* contact style */
+/* contact section style */
 #contact {
   display: flex;
   justify-content: space-between;
   align-items: start;
+
 }
 
 #contact .contact-detail {
   width: 45%;
+  animation: slideInFromLeft 1s linear;
+
 }
+
 #contact form {
   width: 50%;
   margin-top: 10px;
+  animation: slideInFromBottom 1s linear;
+
 }
+
 .contact-detail h2 {
   margin-bottom: 18px;
   font-size: 36px;
   margin-top: 0;
-  font-family: Georgia, "Times New Roman", Times, serif;
   text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
-  font-weight: bold;
 }
 
 .contact-detail span {
   display: block;
   margin: 6px 0px;
 }
+
 .contact-detail .email,
 .phone {
   font-size: 18px;
   margin: 12px 0px;
 }
+
 .contact-detail .email i,
 .phone i {
   margin-right: 12px;
@@ -303,6 +348,7 @@ nav a:hover {
   gap: 10px;
   flex-direction: row;
 }
+
 .contact-media a {
   color: black;
   transition: all 0.3 linear;
@@ -312,6 +358,7 @@ nav a:hover {
   color: rgb(26, 13, 13);
   transform: scale(0.98);
 }
+
 .contact-detail-btn {
   background-color: rgb(17, 17, 17);
   color: #fff;
@@ -326,11 +373,13 @@ nav a:hover {
   transition: all 0.3s linear;
   margin: 20px 0px;
 }
+
 .contact-detail-btn:hover {
   background-color: rgb(35, 38, 39);
   box-shadow: 4px 2px 18px rgb(151, 152, 153);
   transform: scale(0.98);
 }
+
 form input[type="text"],
 form input[type="email"],
 form textarea {
@@ -360,14 +409,13 @@ form input[type="submit"]:hover {
   transform: scale(0.98);
 }
 
-/* gallery style */
+/* gallery section style */
 #gallery h2 {
   margin-bottom: 18px;
   font-size: 36px;
-  font-family: Georgia, "Times New Roman", Times, serif;
   text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
-  font-weight: bold;
 }
+
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
@@ -375,6 +423,7 @@ form input[type="submit"]:hover {
   gap: 36px;
   width: 100%;
 }
+
 .gallery-container img {
   width: 40vh;
   height: 50vh;
@@ -383,6 +432,7 @@ form input[type="submit"]:hover {
   box-shadow: 2px 7px 12px rgba(31, 28, 28, 0.5);
   transition: all 0.2s linear;
 }
+
 .gallery-container img:hover {
   transform: scale(1.07);
 }
@@ -397,8 +447,7 @@ footer {
   text-align: center;
 }
 
-/* styles for dark mode  */
-
+/*---------- styles for dark mode  ---------*/
 .dark-mode {
   background-color: #000000;
   color: #ececec;
@@ -413,6 +462,7 @@ footer {
   color: black;
   background: white;
 }
+
 .dark-mode .bar {
   background-color: #cfcece;
 }
@@ -423,6 +473,7 @@ footer {
   border-radius: 50%;
   transition: all 0.3 linear;
 }
+
 .dark-mode form input[type="text"],
 .dark-mode form input[type="email"],
 .dark-mode textarea {
@@ -436,15 +487,61 @@ footer {
   box-shadow: 2px 4px 18px rgba(233, 233, 233, 0.5);
   text-align: center;
 }
+
 .dark-mode #dateTime {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   box-shadow: 1px 2px 6px rgba(255, 255, 255, 0.7);
 }
 
-/* Responsive styles */
+/* ---------- Animations -----------------*/
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%)
+  }
+
+  100% {
+    transform: translateX(0)
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%)
+  }
+
+  100% {
+    transform: translateX(0)
+  }
+}
+
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%)
+  }
+
+  100% {
+    transform: translateX(0)
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%)
+  }
+
+  100% {
+    transform: translateX(0)
+  }
+}
+
+
+/*----------------- Responsive styles ---------------*/
 
 @media (max-width: 768px) {
+
   /* responsive Navbar */
   header {
     padding: 14px 20px;
@@ -453,6 +550,7 @@ footer {
   .logo span {
     font-size: 30px;
   }
+
   .logo h2 {
     font-size: 24px;
   }
@@ -460,6 +558,7 @@ footer {
   nav {
     width: 100%;
   }
+
   nav ul {
     display: none;
     flex-direction: column;
@@ -473,6 +572,7 @@ footer {
     padding: 1rem;
     box-shadow: 0 6px 6px -2px rgb(139, 136, 136);
   }
+
   .dark-mode nav ul {
     background-color: #000000;
     box-shadow: 0 6px 6px -2px rgb(139, 136, 136);
@@ -485,10 +585,12 @@ footer {
     left: 0;
     width: 100%;
   }
+
   nav li a {
     width: 70%;
     border-radius: 7px;
   }
+
   .toggleDarkMode-btn {
     width: 35px;
     height: 35px;
@@ -503,6 +605,7 @@ footer {
   section {
     padding-top: 50px;
   }
+
   .container {
     padding: 10px 30px;
   }
@@ -519,6 +622,7 @@ footer {
     width: 90%;
     padding: 12px 56px;
   }
+
   .home-image img {
     max-width: 80%;
     max-height: 80%;
@@ -529,11 +633,17 @@ footer {
   .about p {
     width: 98%;
     text-align: center;
+
+
   }
+
   .about img {
     width: 150px;
     height: 150px;
+
+
   }
+
   .skills {
     width: 100%;
     display: flex;
@@ -542,11 +652,13 @@ footer {
     align-items: center;
     gap: 6px;
   }
+
   .skills div {
     margin: 12px;
     padding: 12px 20px;
     font-size: 12px;
   }
+
   .skills img {
     width: 50px;
     height: 50px;
@@ -565,19 +677,23 @@ footer {
   #contact .contact-detail {
     width: 100%;
   }
+
   .contact-detail .contact-media {
     justify-content: center;
   }
+
   .contact-detail-btn {
     padding: 16px;
     font-size: 16px;
     width: 50%;
     margin: 10px 0px 30px 0px;
   }
+
   #contact form {
     width: 80%;
     margin-top: 10px;
   }
+
   form input[type="submit"] {
     background-color: rgb(17, 17, 17);
     color: #fff;
@@ -594,6 +710,7 @@ footer {
     margin: auto;
     gap: 10px;
   }
+
   #time {
     margin: 0;
     font-size: 14px;

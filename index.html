@@ -9,53 +9,50 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 
 <!-- Link to Font Awesome library -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-/>
-</head>
-  <body>
-    <!-- Header section of the page -->
-    <header>
-      <div class="logo">
-        <h2><span>J</span>awad</h2>
-      </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-      <div class="header-RItem">
-            <!-- Toggle button for dark mode -->
-        <div>
-          <button
-            class="toggleDarkMode-btn"
-            onclick="toggleDarkMode()"
-            id="toggle-mode"
-          >
-            <i id="toggle-icon" class="fa fa-moon-o f-x"></i>
-          </button>
-        </div>
-        <nav>
-          <ul id="myUl">
-            <li><a href="#home">Home</a></li>
-            <li><a class="activeLink" href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-          </ul>
-        </nav>
-          <!-- Burger menu toggle icon -->
-        <div class="menu-toggle">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </div>
-    </header>
-    <!-- Date and time section -->
-    <div id="dateTime">
-      <p id="date">Saturday, June 3, 2023</p>
-      <p id="time">3:28:56 PM</p>
+
+
+</head>
+
+<body>
+  <!-- Header section of the page -->
+  <header>
+    <div class="logo">
+      <h2><span>J</span>awad</h2>
     </div>
 
-    <!-- Home  section -->
-    <main class="container">
+    <div class="header-RItem">
+      <!-- Toggle button for dark mode -->
+      <div>
+        <button class="toggleDarkMode-btn" onclick="toggleDarkMode()" id="toggle-mode">
+          <i id="toggle-icon" class="fa fa-moon-o f-x"></i>
+        </button>
+      </div>
+      <nav>
+        <ul id="myUl">
+          <li><a href="#home">Home</a></li>
+          <li><a class="activeLink" href="#about">About</a></li>
+          <li><a href="#contact-break">Contact</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </nav>
+      <!-- Burger menu toggle icon -->
+      <div class="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </header>
+  <!-- Date and time section -->
+  <div id="dateTime">
+    <p id="date">Saturday, June 3, 2023</p>
+    <p id="time">3:28:56 PM</p>
+  </div>
+
+  <!-- Home  section -->
+  <main class="container">
     <section id="home" class="home">
       <div class="home-text">
         <h1>
@@ -66,49 +63,119 @@
           I build high-performing & modern applications with React.js by
           consuming backend APIs
         </p>
-    <!-- Contact me button -->
+        <!-- Contact me button -->
         <a href="#contact">
-          <button class="home-btn">Contact Me</button></a
-        >
+          <button class="home-btn">Contact Me</button></a>
       </div>
       <div class="home-image">
         <img src="assets/images/jawad3.jpg" alt="programmer" />
       </div>
     </section>
+
+
+
     <!-- About section of the page -->
-    <section id="about">
+    <div id="about" class="section-break"></div>
+
+    <section>
       <div class="about">
         <h2>Who Am I?</h1>
-        <img class="jawadImg" src="assets/images/jawad-erfani.jpg" alt="Jawad" />
-        <p>
-          Hello! I am Jawad from Afghanistan. I graduated from Herat University, Faculty of Computer Science, Department of Software Engineering. I am a self-taught developer who loves to take on challenges and find solutions to build efficient projects, both for clients and to enhance my skills.
+          <img class="jawadImg" src="assets/images/jawad-erfani.jpg" alt="Jawad" />
+          <p>
+            Hello! I am Jawad from Afghanistan. I graduated from Herat University, Faculty of Computer Science,
+            Department of Software Engineering. I am a self-taught developer who loves to take on challenges and find
+            solutions to build efficient projects, both for clients and to enhance my skills.
 
-        </p>
+          </p>
 
-        <h3>Skills && Technologies</h3>
-        <div class="skills">
-          <div><img src="assets/icons/typescript.png" alt="" />Typescript</div>
-          <div><img src="assets/icons/Nextjs.png" />NextJS</div>
-          <div><img src="assets/icons/tailwindcss.png" />Tailwind</div>
-          <div><img src="assets/icons/github.png" />Github</div>
-        </div>
+          <h3>Skills && Technologies</h3>
+          <div class="skills">
+            <div><img src="assets/icons/typescript.png" alt="" />Typescript</div>
+            <div><img src="assets/icons/Nextjs.png" />NextJS</div>
+            <div><img src="assets/icons/tailwindcss.png" />Tailwind</div>
+            <div><img src="assets/icons/github.png" />Github</div>
+          </div>
       </div>
     </section>
-    <!-- <div style="margin-bottom: 50px" id="contact"></div> -->
+
 
     <!-- Contact section of the page -->
+    <div id="contact-break" class="section-break"></div>
 
-<section id="contact">
-  <div class="contact-detail">
-    <h2>Contact Me</h2>
+    <section id="contact">
+      <div class="contact-detail">
+        <h2>Contact Me</h2>
 
-    <!-- Email and phone number -->
-    <span class="email"
-      ><i class="fa fa-envelope"></i>jawad.erfani147@gmail.com</span
-    >
-    <span class="phone"><i class="fa fa-whatsapp"></i>0786741729</span>
+        <!-- Email and phone number -->
+        <span class="email"><i class="fa fa-envelope"></i>jawad.erfani147@gmail.com</span>
+        <span class="phone"><i class="fa fa-whatsapp"></i>0786741729</span>
 
-    <!-- Social media links -->
+        <!-- Social media links -->
+        <div class="contact-media">
+          <a href="https://github.com/JawadErfani01">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+          <a href="https://www.linkedin.com/in/jawad-erfani-610197195/">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+          <a href="https://twitter.com/JawadErfani01">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+          <a href="https://web.telegram.org/k/">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-telegram fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </div>
+
+        <!-- Download CV button -->
+        <a href="assets/files/Jawad Erfani.pdf" download="Jawad Erfani">
+          <button class="contact-detail-btn">Download CV</button>
+        </a>
+      </div>
+
+      <!-- Contact form -->
+      <form action="#" method="post">
+        <input type="text" placeholder="Your Name" id="name" required name="name" /><br /><br />
+
+        <input type="email" id="email" required placeholder="Your Email" name="email" /><br /><br />
+
+        <textarea id="message" placeholder="Your Message" rows="5" name="message"
+          spellcheck="true"></textarea><br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+
+
+    <!-- Gallery section -->
+    <div class="section-break"></div>
+
+    <section id="gallery">
+
+      <h2>Gallery</h2>
+      <div class="gallery-container">
+        <!-- Gallery images -->
+        <img src="assets/images/jawad1.jpg" alt="Image 1" />
+        <img src="assets/images/jawad2.jpg" alt="Image 2" />
+        <img src="assets/images/jawad3.jpg" alt="Image 3" />
+      </div>
+    </section>
+
+  </main>
+  <!-- Footer section -->
+  <footer>
+    <h3>Jawad Erfani</h3>
+
     <div class="contact-media">
       <a href="https://github.com/JawadErfani01">
         <span class="fa-stack fa-lg">
@@ -135,90 +202,12 @@
         </span>
       </a>
     </div>
+    <p style="font-size: 12px;">&copy; 2023 | Jawad | All Rights Reserved </p>
+  </footer>
 
-    <!-- Download CV button -->
-    <a href="assets/files/Jawad Erfani.pdf" download="Jawad Erfani">
-      <button class="contact-detail-btn">Download CV</button>
-    </a>
-  </div>
+  <!-- JavaScript file -->
+  <script src="script.js"></script>
 
-  <!-- Contact form -->
-  <form action="#" method="post">
-    <input
-      type="text"
-      placeholder="Your Name"
-      id="name"
-      required
-      name="name"
-    /><br /><br />
+</body>
 
-    <input
-      type="email"
-      id="email"
-      required
-      placeholder="Your Email"
-      name="email"
-    /><br /><br />
-
-    <textarea
-      id="message"
-      placeholder="Your Message"
-      rows="5"
-      name="message"
-      spellcheck="true"
-    ></textarea
-    ><br /><br />
-    <input type="submit" value="Submit" />
-  </form>
-</section>
-
-<!-- Gallery section -->
-<section id="gallery">
-  <h2>Gallery</h2>
-  <div class="gallery-container">
-    <!-- Gallery images -->
-    <img src="assets/images/jawad1.jpg" alt="Image 1" />
-    <img src="assets/images/jawad2.jpg" alt="Image 2" />
-    <img src="assets/images/jawad3.jpg" alt="Image 3" />
-  </div>
-</section>
-
-</main>
-<!-- Footer section -->
-<footer>
-  <h3>Jawad Erfani</h3>
-
-     <div class="contact-media">
-      <a href="https://github.com/JawadErfani01">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-      <a href="https://www.linkedin.com/in/jawad-erfani-610197195/">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-      <a href="https://twitter.com/JawadErfani01">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-      <a href="https://web.telegram.org/k/">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-telegram fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-    </div>
-  <p style="font-size: 12px;">&copy; 2023 | Jawad | All Rights Reserved </p>
-</footer>
-
-<!-- JavaScript file -->
-<script src="script.js"></script>
-
-  </body>
 </html>
